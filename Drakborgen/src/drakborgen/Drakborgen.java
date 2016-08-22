@@ -16,6 +16,8 @@ public class Drakborgen {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        // testar detta om det fungerar
     }
     
 }
