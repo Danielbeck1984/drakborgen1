@@ -11,6 +11,7 @@ package drakborgen;
  */
 public class randomGame {
     
+    
 
     
     int kvar = 0, fram = 0, bak = 0, i = 0;
@@ -24,16 +25,16 @@ public class randomGame {
         switch(randomNum){
             case 0:
                 System.out.println("1 steg framåt");
-                fram = ++fram;
+                fram = 0;
                 break;
                 
             case 1:
                 System.out.println("Stå kvar");
-                kvar = ++kvar;
+                kvar = 1;
                 break;
             default:
                 System.out.println("1 steg bakåt");
-                bak = ++bak;
+                bak = 2;
                 break;
                    
         }
@@ -70,9 +71,18 @@ public class randomGame {
              System.out.println("Rustning");
              return 3;
          }
-             
-          
-    
+         
     }
+    
+    public static void StridFiende(int i){
+        
+        if (i == 0){
+            randomGame rg = new randomGame();
+            rg.slump();
+            
+            if (x == 0)
+        }
+             
+         }
     
 }
