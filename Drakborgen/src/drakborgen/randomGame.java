@@ -16,14 +16,14 @@ public class randomGame {
     
     int i = 0;
     
-    public static int Steg() {
+    public static int Steg(int i) {
         
         
         /* denna funktionen slumpar om man ska flytta frammåt, flytta bakåt eller
            stå kvar*/
         
         // slumpa ett tal mellan 0 & 20000
-        int i =(int) (Math.random() * 20000);
+        i =(int) (Math.random() * 20000);
         
         // kör modulus så det blir ett tal mellan 0-2
         int randomNum = i % 3;
@@ -98,36 +98,85 @@ public class randomGame {
          
     }
     
-    public static void StridFiende(int i){
+    public static int StridPlatsFörflytning(int i){
+        
+        /* i denna funktionen så kollar man vilken plats man står i
+        stridshjulet & sen flyttar den frammåt eller bakåt eller står kvar
+        på samma ställe
+        */
+        
         int fienden =0;
         
-        if (i == 0){
+        if (fienden == 0) {
             // för att flytta fienden framåt, bakåt eller stå kvar på
             // den platsen som den står på för stunden
             randomGame rg = new randomGame();
-            rg.Steg(fienden);
+            // hämtar ett värde mellan 0-2 för att se om man förflyttar sig
+            fienden = rg.Steg(fienden);
             
+            
+            // om förflytningen är "0" så flyttas den ett steg frammåt
             if (fienden == 0){
                 
-            }
-            
-            else if (fienden == 1){
+                // om variaben "i" är "3" så ska den ändras till "0" på 
+                // stridshjulet
+                if(i == 3){
+                    
+                    return 0;
+                    
+                }
+                
+                // plus 1 så man tar ett steg framåt i stridshjulet
+                else {
+                    i = ++i;
+                }
                 
             }
             
-            else {
+            // om förflyttningen är "2" så flyttar man ett steg bakåt
+            else if (fienden == 2){
                 
+                // om variaben "i" är "0" så ska den ändras till "3" på 
+                // stridshjulet 
+                if (i == 0){
+                    
+                return 3;
+               
+                }
+                // ta bort 1 så man går ett steg bakåt i hjulet
+                else{
+                    i = --i;
+                }
+            
             }
            
         }
-        // skapa 3 if satser till 1, 2, 3, för fiendens plats så den kan flytta
-        // sig frammåt bakåt eller stå kvar på alla dom ställerna 
+        
+        // om ingen av dom följande har skett så står man kvar på samma ställe
+        return i;
+        
+    }
+
+
+    public static int StridsHjul(int i){
+        
+        if (i == 0){
+            System.out.println("Styrka");
+        }
+        
+        else if (i == 1){
+            System.out.println("Psyke");
+        }
+        
+        else if (i == 2){
+            System.out.println("Vighet");
+        }
+        else {
+            System.out.println("Rustning");
+        }
+        
+        return i;
     }
              
-        
-
-    private void Steg(int fienden) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+ 
 }

@@ -26,40 +26,17 @@ public class Drakborgen {
             
         
             randomGame rg = new randomGame();
-            rg.Plats(dinPlats);
+            dinPlats = rg.Plats(dinPlats);
+            fiendensPlats = rg.StridPlatsFörflytning(dinPlats);
+            rg.StridsHjul(fiendensPlats);
             
-            /*Ffram = Ffram + rg.fram;
-            Fkvar = Fkvar + rg.kvar;
-            Fbak = Fbak + rg.bak;
-           */
-            
-            i = ++i;
+            i = 2;
 
     }
         
-                while (x < y) {
-            
-            
+               
         
-            randomGame rg = new randomGame();
-            rg.slump();
-            /*Dfram = Dfram + rg.fram;
-            Dkvar = Dkvar + rg.kvar;
-            Dbak = Dbak + rg.bak;
-           */
-            
-            x = ++x;
-
-    }
-        
-         /*  System.out.println("Fienden Fram " + Ffram);
-           System.out.println("Fienden kvar " + Fkvar);
-           System.out.println("Fienden bak " + Fbak);
-           
-           System.out.println("Du Fram " + Dfram);
-           System.out.println("Du kvar " + Dkvar);
-           System.out.println("Du bak " + Dbak);
-       */
+         
            
            
     }
