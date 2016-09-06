@@ -27,7 +27,7 @@ public class Drakborgen {
         
             randomGame rg = new randomGame();
             rg.Plats(dinPlats);
-            rg.slump();
+            
             /*Ffram = Ffram + rg.fram;
             Fkvar = Fkvar + rg.kvar;
             Fbak = Fbak + rg.bak;
