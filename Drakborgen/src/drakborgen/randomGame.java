@@ -19,8 +19,10 @@ public class randomGame {
     public static int Steg(int i) {
         
         
-        /* denna funktionen slumpar om man ska flytta frammåt, flytta bakåt eller
-           stå kvar*/
+        /* 
+        * denna funktionen slumpar om man ska flytta frammåt, flytta bakåt eller
+        * stå kvar
+        */
         
         // slumpa ett tal mellan 0 & 20000
         i =(int) (Math.random() * 20000);
@@ -60,8 +62,9 @@ public class randomGame {
     
     public static int Plats(int i){
         
-        /* denna funktion används till för att slumpa fram vart man
-           ställer sig i första stridsomgången då det är valfritt mer i spelet
+        /* 
+        * denna funktion används till för att slumpa fram vart man
+        * ställer sig i första stridsomgången då det är valfritt mer i spelet
         */
         
         // slumpar ett tal från 0 -2000
@@ -100,9 +103,10 @@ public class randomGame {
     
     public static int StridPlatsFörflytning(int i){
         
-        /* i denna funktionen så kollar man vilken plats man står i
-        stridshjulet & sen flyttar den frammåt eller bakåt eller står kvar
-        på samma ställe
+        /* 
+        * i denna funktionen så kollar man vilken plats man står i
+        * stridshjulet & sen flyttar den frammåt eller bakåt eller står kvar
+        * på samma ställe
         */
         
         int fienden =0;
@@ -157,7 +161,6 @@ public class randomGame {
         
     }
 
-
     public static int StridsHjul(int i){
         
         if (i == 0){
@@ -178,5 +181,26 @@ public class randomGame {
         return i;
     }
              
- 
+    public static int SlagILuften(int i, int x){
+        
+        int slagILuften = 0;
+        
+        /*******************************************************************
+         Test kör denna innan du skriver en text till denna
+        
+         Skissa lite på hur man kan göra slag i luften.
+         funderar om det räker med en if else if sats med 2 stycken val i
+         programet eller om man tänker fel just nu.
+        ********************************************************************/
+        
+        if (i == 0 && x == 2 || i == 1 && x == 3){
+            
+            //om detta är upfyllt så blir det slag i luften
+            slagILuften = 1;
+            System.out.println("Slag i luften");
+        }
+        
+              
+        return slagILuften;
+    }
 }
