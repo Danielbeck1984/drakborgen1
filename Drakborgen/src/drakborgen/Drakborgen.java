@@ -15,10 +15,9 @@ public class Drakborgen {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int Fkvar = 0, Ffram = 0, Fbak = 0, y = 1, i = 0, x = 0;
-        int Dkvar = 0, Dfram = 0, Dbak = 0;
-        int dinPlats = 0, fiendensPlats = 0;
-        
+        int y = 1, i = 0, x = 0;
+        int dinPlats = 0, fiendensPlats = 0, slagILuften = 0;
+        int dinSkada = 0, fiendenSkada = 0;
         
         
         while (i < y) {
@@ -27,9 +26,10 @@ public class Drakborgen {
         
             randomGame rg = new randomGame();
             dinPlats = rg.Plats(dinPlats);
-            fiendensPlats = rg.StridPlatsFörflytning(dinPlats);
-            rg.StridsHjul(fiendensPlats);
+            fiendensPlats = rg.Plats(fiendensPlats);
+            slagILuften = rg.SlagILuften(dinPlats, fiendensPlats);
             
+            System.out.println(slagILuften);
             i = 2;
 
     }

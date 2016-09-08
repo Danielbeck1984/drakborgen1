@@ -203,4 +203,12 @@ public class randomGame {
               
         return slagILuften;
     }
+
+    public static int TillDelaSkada(int dinSkada, int fiendensSkada, int dinPlats, int fiendensPlats){
+        
+        
+        
+        return 0;
+    }
+    
 }
